@@ -42,4 +42,18 @@ export default class AppContainer extends Container {
 
     }
 
+    addBoardItemText = (title, text) => {
+
+        this.setState( immutable(this.state, {
+            boards : {
+                [title] : {
+                    [new Date() * 1] : {
+                        $set : text
+                    }
+                }
+            }
+        }))
+
+    }
+
 }
