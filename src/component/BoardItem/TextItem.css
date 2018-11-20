@@ -1,0 +1,12 @@
+.BoardTextItem {
+    height: 100%;
+}
+
+
+.BoardTextItem input {
+    height: 100%;
+}
+
+.BoardTextItem .BoardTextItem__MoveBtn {
+    cursor: pointer;
+}
