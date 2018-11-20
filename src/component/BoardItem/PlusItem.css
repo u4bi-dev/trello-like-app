@@ -1,0 +1,8 @@
+.BoardPlusItem {
+    height: 100%;
+    width: 86%;
+    background-color: #ffffff;
+    text-align: center;
+    margin: auto;
+    cursor: pointer;
+}
