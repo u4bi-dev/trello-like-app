@@ -7,6 +7,13 @@ import AppContainer from '../provider/container/AppContainer'
 import BoardItem from './BoardItem'
 
 class Board extends Component {
+
+    state = {
+        isEditMode : false
+    }
+
+    flagEditMode = () => this.setState({ isEditMode : !this.state.isEditMode })
+
     render() {
         return (
             <Subscribe to={[AppContainer]}>
@@ -30,7 +37,12 @@ class Board extends Component {
                                 text={ item.text }
                                 setBoardItemText={ app.setBoardItemText } />) }
 
-                    <BoardItem isPlus={ true } />
+                    <BoardItem 
+                        isPlus={ true } 
+                        title={ this.props.title }
+                        isEditMode={ this.state.isEditMode } 
+                        flagEditMode={ this.flagEditMode }
+                        addBoardItemText={ app.addBoardItemText }/>
 
                 </div>
 

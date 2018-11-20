@@ -1,11 +1,21 @@
 import React from 'react'
 import './PlusItem.css'
 
-const BoardPlusItem = () => {
+import BoardEditItem from './EditItem'
 
+const BoardPlusItem = ({ title, isEditMode, flagEditMode, addBoardItemText }) => {
     return (
-    <div className='BoardPlusItem'>
-        +
+    <div className='BoardPlusItem' onClick={ _ => !isEditMode && flagEditMode() }>
+        { isEditMode 
+            ? 
+            <BoardEditItem 
+                title={ title } 
+                addBoardItemText={ addBoardItemText } 
+                flagEditMode={ flagEditMode } 
+            /> 
+            : 
+            '+' 
+        }
     </div>
     )
 
