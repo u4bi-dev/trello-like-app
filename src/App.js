@@ -13,6 +13,8 @@ class App extends Component {
             { (app) => {
             
             let last = Object.keys(app.state.boards).length - 1
+            let left = title => Object.keys(app.state.boards)[Object.keys(app.state.boards).indexOf(title) - 1] || null
+            let right = title => Object.keys(app.state.boards)[Object.keys(app.state.boards).indexOf(title) + 1] || null
 
             return (<div className='App'>
 
@@ -25,6 +27,10 @@ class App extends Component {
                                         if (cur === last) return 'last'
                                         return 'middle'
                                     })(index, last) }
+                                    anchor={{
+                                        left : left(title),
+                                        right : right(title)
+                                    }}
                                     title={ title } 
                                     items={ Object.keys(app.state.boards[title])
                                                     .map(id => ({ 

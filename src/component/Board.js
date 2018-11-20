@@ -31,11 +31,13 @@ class Board extends Component {
                             this.props.items.map((item, index) => 
                                 <BoardItem 
                                     key={ index }
-                                    boardState={ this.props.boardState } 
+                                    boardState={ this.props.boardState }
+                                    anchor={ this.props.anchor }
                                     title={ this.props.title }
                                     id={ item.id } 
                                     text={ item.text }
-                                    setBoardItemText={ app.setBoardItemText } />) }
+                                    setBoardItemText={ app.setBoardItemText }
+                                    moveBoardItem={ app.moveBoardItem } />) }
 
                         <BoardItem 
                             isPlus={ true } 

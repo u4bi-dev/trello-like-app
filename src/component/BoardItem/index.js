@@ -4,7 +4,7 @@ import './index.css'
 import BoardTextItem from './TextItem'
 import BoardPlusItem from './PlusItem'
 
-const BoardItem = ({ boardState, title, id, isPlus, text, setBoardItemText, isEditMode, flagEditMode, addBoardItemText }) => {
+const BoardItem = ({ boardState, anchor, title, id, isPlus, text, setBoardItemText, isEditMode, flagEditMode, addBoardItemText, moveBoardItem }) => {
 
         return (
         <div className='BoardItem'>
@@ -12,10 +12,12 @@ const BoardItem = ({ boardState, title, id, isPlus, text, setBoardItemText, isEd
             { !isPlus ? 
                 <BoardTextItem 
                     boardState={ boardState }
+                    anchor={ anchor }
                     title={ title }
                     id={ id }
                     text={ text } 
-                    setBoardItemText={ boardState && setBoardItemText }
+                    setBoardItemText={ setBoardItemText }
+                    moveBoardItem={ moveBoardItem }
                 />
                 :
                 <BoardPlusItem 
