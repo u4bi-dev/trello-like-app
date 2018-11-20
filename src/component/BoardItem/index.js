@@ -4,11 +4,11 @@ import './index.css'
 import BoardTextItem from './TextItem'
 import BoardPlusItem from './PlusItem'
 
-const BoardItem = ({ isPlus }) => {
+const BoardItem = ({ isPlus, text }) => {
         return (
         <div className='BoardItem'>
 
-            { !isPlus ? <BoardTextItem /> : <BoardPlusItem /> }
+            { !isPlus ? <BoardTextItem text={ text } /> : <BoardPlusItem /> }
 
         </div>)
 }

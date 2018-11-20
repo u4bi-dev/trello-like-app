@@ -9,18 +9,12 @@ class Board extends Component {
         <div className='Board'>
 
             <div className='Board__Title'>
-                Title
+                { this.props.title }
             </div>
 
             <div className='Board__Item_Wrapper'>
 
-                <BoardItem isPlus={ false } />
-
-                <BoardItem isPlus={ false } />
-
-                <BoardItem isPlus={ false } />
-
-                <BoardItem isPlus={ false } />
+                { this.props.items && this.props.items.map(item => <BoardItem key={ item.key } text={ item.text } />) }
 
                 <BoardItem isPlus={ true } />
 

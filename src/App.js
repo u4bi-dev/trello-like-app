@@ -13,13 +13,20 @@ class App extends Component {
             { (app) => (
             <div className='App'>
 
-                <Board />
+                <Board title='A' items={
+                    [
+                        { key : '1', text : 'item 1' },
+                        { key : '2', text : 'item 2' },
+                        { key : '3', text : 'item 3' },
+                        { key : '4', text : 'item 4' }
+                    ]
+                }/>
 
-                <Board />
+                <Board title='B' />
 
-                <Board />
+                <Board title='C' />
 
-                <Board />                
+                <Board title='D' />                
 
             </div>) }
         </Subscribe>

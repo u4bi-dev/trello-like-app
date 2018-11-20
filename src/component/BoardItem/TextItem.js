@@ -1,14 +1,14 @@
 import React from 'react'
 import './TextItem.css'
 
-const BoardTextItem = () => {
+const BoardTextItem = ({ text }) => {
     
     return (
     <div className='BoardTextItem'>
 
             <span className='BoardTextItem__MoveBtn'>{ '<' }</span>
 
-            <input type='text' />
+            <input type='text' value={ text } />
 
             <span className='BoardTextItem__MoveBtn'>{ '>' }</span>
 
