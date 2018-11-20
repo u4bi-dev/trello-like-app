@@ -23,13 +23,13 @@ class App extends Component {
                                     boardState={ ((cur, last) => {
                                         if (cur === 0) return 'first'
                                         if (cur === last) return 'last'
-                                        return ''
+                                        return 'middle'
                                     })(index, last) }
                                     title={ title } 
                                     items={ Object.keys(app.state.boards[title])
-                                                    .map(key => ({ 
-                                                        key : key,
-                                                        text : app.state.boards[title][key] 
+                                                    .map(id => ({ 
+                                                        id : id,
+                                                        text : app.state.boards[title][id]
                                                     }))} />) }
 
             </div>) }}
