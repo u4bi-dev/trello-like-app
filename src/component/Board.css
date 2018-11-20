@@ -3,6 +3,7 @@
     float: left;
     margin-right: 40px;
     margin-bottom: 20px;
+    border: 1px solid #000;
 }
 
 .Board .Board__Title {
