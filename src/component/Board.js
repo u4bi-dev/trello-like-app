@@ -21,30 +21,30 @@ class Board extends Component {
                 return (
                 <div className='Board'>
 
-                <div className='Board__Title'>
-                    { this.props.title }
-                </div>
+                    <div className='Board__Title'>
+                        { this.props.title }
+                    </div>
 
-                <div className='Board__Item_Wrapper'>
+                    <div className='Board__Item_Wrapper'>
 
-                    { this.props.items && 
-                        this.props.items.map((item, index) => 
-                            <BoardItem 
-                                key={ index }
-                                boardState={ this.props.boardState } 
-                                title={ this.props.title }
-                                id={ item.id } 
-                                text={ item.text }
-                                setBoardItemText={ app.setBoardItemText } />) }
+                        { this.props.items && 
+                            this.props.items.map((item, index) => 
+                                <BoardItem 
+                                    key={ index }
+                                    boardState={ this.props.boardState } 
+                                    title={ this.props.title }
+                                    id={ item.id } 
+                                    text={ item.text }
+                                    setBoardItemText={ app.setBoardItemText } />) }
 
-                    <BoardItem 
-                        isPlus={ true } 
-                        title={ this.props.title }
-                        isEditMode={ this.state.isEditMode } 
-                        flagEditMode={ this.flagEditMode }
-                        addBoardItemText={ app.addBoardItemText }/>
+                        <BoardItem 
+                            isPlus={ true } 
+                            title={ this.props.title }
+                            isEditMode={ this.state.isEditMode } 
+                            flagEditMode={ this.flagEditMode }
+                            addBoardItemText={ app.addBoardItemText }/>
 
-                </div>
+                    </div>
 
                 </div>
                 )
