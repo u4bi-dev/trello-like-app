@@ -56,4 +56,16 @@ export default class AppContainer extends Container {
 
     }
 
+    deleteBoardItem = (title, id) => {
+
+        this.setState( immutable(this.state, {
+            boards : {
+                [title] : {
+                    $unset : [id]
+                }
+            }
+        }))
+
+    }
+
 }
