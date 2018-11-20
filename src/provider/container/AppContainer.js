@@ -1,4 +1,5 @@
 import { Container } from 'unstated'
+import immutable from 'immutability-helper'
 
 export default class AppContainer extends Container {
 
@@ -25,6 +26,20 @@ export default class AppContainer extends Container {
                 '3' : 'd item 3',
             }
         }
+    }
+
+    setBoardItemText = (title, id, text) => {
+
+        this.setState( immutable(this.state, {
+            boards : {
+                [title] : {
+                    [id] : {
+                        $set : text
+                    }
+                }
+            }
+        }))
+
     }
 
 }
