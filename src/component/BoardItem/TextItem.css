@@ -5,6 +5,7 @@
 
 .BoardTextItem input {
     height: 100%;
+    text-align: center;
 }
 
 .BoardTextItem .BoardTextItem__MoveBtn {

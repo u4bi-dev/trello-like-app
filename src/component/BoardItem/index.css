@@ -1,4 +1,5 @@
 .BoardItem {
     padding: 5px;
     height: 20px;
+    min-width: 140px;
 }
